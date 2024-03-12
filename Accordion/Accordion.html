@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion and Child Accordion</title>
+    <link rel="stylesheet" href="Accordion.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body>
+
+    <div class="AccordionBg">
+       <div class="Accordion">
+            <div class="AccordionBox">
+               <div class="label">Heading</div>
+                <div class="AccordionContent">
+                    <p>Lorem ipsum dolor sit amet, 
+                        consectetur adipisicing thelit. Quam, repellendus facere, 
+                        id porro magnam blanditiiss quoteos dolores ratione quidem ipsam esse quos pariatur,
+                        repellat obcaecati!
+                    </p>
+                </div>
+            </div>
+            <div class="AccordionBox">
+                <div class="label">Heading (Child-Accordion)</div>
+                 <div class="AccordionContent">
+                     <div class="child-tab">
+                        <input type="checkbox" id="tab-1">
+                        <label for="tab-1">
+                            <span>Child-Accordion</span>
+                            <div class="icon"><i class="fas fa-plus"></i></div>
+                        </label>
+                        <div class="child-content">
+                            <p>Lorem ipsum dolor sit amet, 
+                                consectetur adipisicing thelit. Quam, repellendus facere, 
+                                id porro magnam blanditiiss quoteos dolores ratione quidem ipsam esse quos pariatur,
+                                repellat obcaecati!
+                            </p>
+                        </div>
+                     </div>
+                     <div class="child-tab">
+                        <input type="checkbox" id="tab-2">
+                        <label for="tab-2">
+                            <span>Child-Accordion</span>
+                            <div class="icon"><i class="fas fa-plus"></i></div>
+                        </label>
+                        <div class="child-content">
+                            <p>Lorem ipsum dolor sit amet, 
+                                consectetur adipisicing thelit. Quam, repellendus facere, 
+                                id porro magnam blanditiiss quoteos dolores ratione quidem ipsam esse quos pariatur,
+                                repellat obcaecati!
+                            </p>
+                        </div>
+                     </div>
+                 </div>
+             </div>
+             <div class="AccordionBox">
+                <div class="label">Heading</div>
+                 <div class="AccordionContent">
+                     <p>Lorem ipsum dolor sit amet, 
+                         consectetur adipisicing thelit. Quam, repellendus facere, 
+                         id porro magnam blanditiiss quoteos dolores ratione quidem ipsam esse quos pariatur,
+                         repellat obcaecati!
+                     </p>
+                 </div>
+             </div>
+             <div class="AccordionBox">
+                <div class="label">Heading</div>
+                 <div class="AccordionContent">
+                     <p>Lorem ipsum dolor sit amet, 
+                         consectetur adipisicing thelit. Quam, repellendus facere, 
+                         id porro magnam blanditiiss quoteos dolores ratione quidem ipsam esse quos pariatur,
+                         repellat obcaecati!
+                     </p>
+                 </div>
+             </div>
+       </div>
+    </div>
+
+
+    <script>
+        const AccordionBox = document.getElementsByClassName("AccordionBox");
+            for( i = 0; i<AccordionBox.length; i++){
+                AccordionBox[i].addEventListener("click", function(){
+                         this.classList.toggle("active");
+                });
+            };
+    </script>
+    
+</body>
+</html>
