@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.ImageBox{
+    width: 100%;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+}
+.ImageBox img{
+    width: 100%;
+    height: 300px;
+    transition: .3s ease;
+}
+.ImageBox img:hover{
+    transform: scale(1.02);
+   
+}
+.ImageBox .imageCard{
+    padding: 5px;
+    background: black;
+    cursor: pointer;
+    overflow: hidden;
+}
+.imageCard h5{
+    color: white;
+    font-weight: 400;
+    padding: 10px;
+    font-size: 15px;
+}
