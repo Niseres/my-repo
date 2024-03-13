@@ -1,0 +1,103 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.back-ground{
+    background:linear-gradient(rgba(0,0,0,.7),rgb(104, 79, 79)), url(bg.png);
+    background-size: 100% 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+}
+.form-box{
+    background: white;
+    max-width: 800px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    border-radius: 5px;
+}
+.form-box .left{
+    position: relative;
+    text-align: center;
+
+}
+.form-box .left::after{
+    position: absolute;
+    content: "";
+    background: red;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 70%;
+    right: -17px;
+}
+.form-box .left .detail{
+    margin: 20px;
+}
+.form-box .left .detail i{
+    font-size: 20px;
+    color: red;
+    margin-bottom: 3px;
+}
+.form-box .left .details{
+    font-size: 16px;
+}
+.form-box .right{
+    margin-left: 60px;
+}
+.form-box .right h1{
+    font-size: 25px;
+    font-weight: 400;
+    color: red;
+   
+}
+.form-box .right p{
+    font-size: 15px;
+    padding: 7px 0;
+
+}
+.form-box .right form input,
+.form-box .right form textarea{
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid gray;
+    margin: 7px 0;
+    border-radius: 5px;
+}
+.form-box .right form input[type=submit]{
+    outline: none;
+    border: none;
+    background: red;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+}
+@media(max-width:900px){
+    .form-box{
+        flex-direction: column-reverse;
+    }
+    .form-box .left{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .form-box .left::after{
+        display: none;
+    }
+    .form-box .right{
+        width: 100%;
+        margin-left: 0;
+    }
+    
+.form-box .right form input[type=submit]{
+    margin: 15px 0 10px 0;
+}
+}
