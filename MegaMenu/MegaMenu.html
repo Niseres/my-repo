@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MegaMenu</title>
+    <link rel="stylesheet" href="MegaMenu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+<body>
+    <nav>
+        <div class="wrapper">
+            <div class="Menu"><i class="fas fa-bars"></i></div>
+            <a href="#" class="logo">LOGO</a>
+            <ul class="navLink">
+                <li><a href="">Home</a></li>
+                <li><a href="" class="deskMobile">About +</a>
+                    <input type="checkbox" id="About">
+                    <label for="About" class="Mobile">About +</label>
+                    <ul class="subMenu">
+                        <li><a href="">SubMenu 1</a></li>
+                        <li><a href="">SubMenu 2</a></li>
+                        <li><a href="">SubMenu 3</a></li>
+                        <li><a href="">SubMenu 4</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Services</a></li>
+                <li><a href="" class="deskMobile">Blog +</a>
+                    <input type="checkbox" id="Blog">
+                    <label for="Blog" class="Mobile">Blog +</label>
+                    <div class="megaBox">
+                        <div class="content">
+                            <div class="row"><img src="car_2.png" alt=""></div>
+                            <div class="row">
+                                <div class="title">Heading</div>
+                                <ul class="megaLink">
+                                    <li><a href="">MegaLink 1</a></li>
+                                    <li><a href="">MegaLink 2</a></li>
+                                    <li><a href="">MegaLink 3</a></li>
+                                    <li><a href="">MegaLink 4</a></li>
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <div class="title">Heading</div>
+                                <ul class="megaLink">
+                                    <li><a href="">MegaLink 1</a></li>
+                                    <li><a href="">MegaLink 2</a></li>
+                                    <li><a href="">MegaLink 3</a></li>
+                                    <li><a href="">MegaLink 4</a></li>
+                                </ul>
+                            </div>
+                            <div class="row">
+                                <div class="title">Heading</div>
+                                <ul class="megaLink">
+                                    <li><a href="">MegaLink 1</a></li>
+                                    <li><a href="">MegaLink 2</a></li>
+                                    <li><a href="">MegaLink 3</a></li>
+                                    <li><a href="">MegaLink 4</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="">Vlog</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+            <div class="cancel"><i class="fas fa-times"></i></div>
+        </div>
+    </nav>
+
+    <div class="back-ground">
+        
+    </div>
+
+
+
+
+
+
+
+
+    <script>
+        const Menu = document.querySelector(".Menu");
+        const cancel = document.querySelector(".cancel");
+        const navLink = document.querySelector(".navLink");
+
+        Menu.onclick = function (){
+            Menu.classList.add("hide")
+            cancel.classList.add("show")
+            navLink.classList.add("active")
+        };
+        cancel.onclick = function (){
+            Menu.classList.remove("hide")
+            cancel.classList.remove("show")
+            navLink.classList.remove("active")
+        }
+    </script>
+</body>
+</html>

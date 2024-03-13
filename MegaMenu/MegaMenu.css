@@ -1,0 +1,235 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+nav{
+    position: fixed;
+    width: 100%;
+    height: 65px;
+    background: black;
+    z-index: 99;
+    line-height: 65px;
+}
+nav .wrapper{
+    position: relative;
+    max-width: 1250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    margin: auto;
+}
+.wrapper .logo{
+    font-size: 22px;
+    color: wheat;
+    text-decoration: none;
+}
+.wrapper .navLink{
+    display: inline-flex;
+}
+.navLink li{
+    list-style: none;
+}
+.navLink li a{
+    text-decoration: none;
+    font-size: 20px;
+    color: wheat;
+    padding: 9px 15px;
+    transition: .3s ease-in-out;
+    
+}
+.navLink li a:hover{
+    color: white;
+    
+}
+.navLink .subMenu{
+    position: absolute;
+    width: 200px;
+    background: black;
+    top: 85px;
+    line-height: 45px;
+    opacity: 0;
+    visibility: hidden;
+    
+}
+.navLink li:hover .subMenu,
+.navLink li:hover .megaBox{
+    top: 65px;
+    opacity: 1;
+    visibility: visible;
+    transition: all .3s ease;
+   
+}
+.subMenu li a{
+    padding: 0 0 0 15px;
+    
+
+}
+.megaBox{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 85px;
+    padding: 0 30px;
+    opacity: 0;
+    visibility: hidden;
+}
+.megaBox .content{
+    background: black;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 20px;
+}
+.content .row{
+    width: calc(25% - 30px);
+    line-height: 40px;
+}
+.content .row .title{
+    color: wheat;
+    font-size: 20px;
+}
+.content .row img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 1px solid wheat;
+}
+.content .row .megaLink{
+    margin-left: -40px;
+    border-left: 1px solid rgb(48, 46, 44);
+}
+.row .megaLink li{
+    padding: 0 20px;
+}
+.row .megaLink li a{
+    padding: 0 20px;
+}
+.navLink input{
+    display: none;
+}
+.navLink .Mobile{
+    display: none;
+}
+.wrapper .Menu,
+.wrapper .cancel{
+    color: wheat;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+.wrapper .Menu i,
+.wrapper .cancel i{
+    border: 1px solid wheat;
+    padding: 1px 3px;
+}
+.wrapper .Menu.hide{
+    display: none;
+}
+.wrapper .cancel.show{
+    display: block;
+}
+.back-ground{
+    background:linear-gradient(rgba(0,0,0,.7), red), url(car_2.png);
+    background-size: 100% 100%;
+    height: 100vh;
+}
+@media screen and (max-width:900px) {
+    nav .wrapper{
+        padding: 0 50px;
+    }
+    .wrapper .Menu{
+        display: block;
+    }
+    .wrapper .navLink{
+        position: absolute;
+        width: 400px;
+        background: black;
+        height: 100vh;
+        top: 100%;
+        left: 100%;
+        display: block;
+        line-height: 50px;
+        overflow-y: auto;
+        padding: 0 20px;
+        transition: all .4s ease;
+    }
+    .wrapper .navLink.active{
+        left: 0;
+    }
+    .navLink li{
+        margin:  0 20px;
+    }
+    .navLink .subMenu{
+        position: static;
+        width: 100%;
+        background: black;
+        top: 65px;
+        opacity: 1;
+        visibility: visible;
+        padding-left: 10px;
+        display: none;
+    }
+    #About:checked ~ .subMenu{
+        display: block;
+    }
+    .subMenu li{
+        margin: 0;
+    }
+    .subMenu li a{
+        font-size: 18px;
+    }
+    .megaBox{
+        position: static;
+        width: 100%;
+        top: 65px;
+        padding: 0 20px;
+        opacity: 1;
+        visibility: visible;
+        display: none;
+    }
+    #Blog:checked ~ .megaBox{
+        display: block;
+    }
+    .megaBox .content{
+        background: black;
+        flex-direction: column;
+        padding: 20px 20px 0 20px;
+    }
+
+    .content .row{
+        width: 100%;
+       margin-bottom: 15px;
+       border-top: 1px solid rgb(48, 46, 44);
+    }
+    .content .row:nth-child(1),
+    .content .row:nth-child(2){
+        border-top: 0px;
+    }
+    .content .row .megaLink{
+       padding-left: 10px;
+        border-left: 0;
+    }
+    .row .megaLink li{
+        margin: 0;
+    }
+    .row .megaLink li a{
+        font-size: 18px;
+    }
+    .navLink .deskMobile{
+        display: none;
+    }
+    .navLink .Mobile{
+        display: block;
+        cursor: pointer;
+        color: wheat;
+        font-size: 20px;
+        padding-left: 15px;
+
+    }
+    .navLink .Mobile:hover{
+        color: white;
+    }
+}
